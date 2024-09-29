@@ -6,6 +6,9 @@
             "command": "/usr/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
+                "-I${workspaceFolder}/",
+                "-I${workspaceFolder}/include/",
+                "-I${workspaceFolder}/include/inja/",
                 "-g",
                 "${file}",
                 "-o",

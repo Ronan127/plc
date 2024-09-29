@@ -1,0 +1,8 @@
+template:
+  - trigger:
+      - platform: event
+        event_name: "Event 1"
+    sensor:
+      - name: "count"
+        state: '{{ sensors.count + 1 }}'
+        unit_of_measurement: "Litres"
