@@ -9,6 +9,7 @@
                 "-I${workspaceFolder}/",
                 "-I${workspaceFolder}/include/",
                 "-I${workspaceFolder}/include/inja/",
+                "-I${workspaceFolder}/include/ryaml/",
                 "-g",
                 "${file}",
                 "-o",

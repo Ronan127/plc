@@ -6,6 +6,7 @@
 // #include "../include/inja/inja.hpp"
 #include <nlohmann/json.hpp>
 #include <inja.hpp>
+#include <ryaml/ryml_all.hpp>
 using json = nlohmann::json;
 
 using namespace std;
@@ -94,8 +95,13 @@ void my_func2(){
     cout << "Jodie";
 }
 
-int main()
+int main()  
 {
+
+    // Parse YAML code in place, potentially mutating the buffer:
+    char yml_buf[] = "{foo: 1, bar: [2, 3], john: doe}";
+    ryml::Tree tree = ryml::parse_in_place(yml_buf);
+
 
     sensor my_sensor("my_sensor");
     my_sensor.state_template = "{{ 1 }}";

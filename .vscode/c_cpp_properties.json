@@ -6,7 +6,8 @@
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/include/**",
                 "${workspaceFolder}/include/inja/",
-                "${workspaceFolder}/include/nlohmann/"
+                "${workspaceFolder}/include/nlohmann/",
+                "${workspaceFolder}/include/ryaml/"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
