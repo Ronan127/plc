@@ -1,8 +1,15 @@
 template:
-  - trigger:
+  sensor:
+  - name: "count"
+    state:  "{{ exists(\"count\") }}" 
+    unit: "Litres"
+    trigger:
       - platform: event
         event_name: "Event 1"
-    sensor:
-      - name: "count"
-        state: '{{ sensors.count + 1 }}'
-        unit_of_measurement: "Litres"
+  - name: "count_number_2"
+    state: "{{3}}" # '{{ count_number_2 + 1 }}'
+    unit: "Litres"
+    trigger:
+      - platform: event
+        event_name: "Event 2"
+      
